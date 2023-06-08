@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import './globals.css'
+import Navbar from '@/components/navbar'
 
 export const metadata = {
   title: 'Mina Webpage',
@@ -9,7 +11,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header>
+          <Navbar />
+        </header>
+        <main>
+        {children}
+        </main>
+        <footer>
+          this is a footer
+        </footer>
+      </body>
     </html>
   )
 }

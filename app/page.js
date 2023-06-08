@@ -3,15 +3,9 @@ import Image from 'next/image'
 export default function Home() {
   return (
       <>
-        <header>
+        <div className='-z-10'>
           <div className='text-6xl'>Mina Webpage</div>
-        </header>
-        <main>
-          Main section
-        </main>
-        <footer>
-          this is a footer
-        </footer>
+        </div>
       </>
   )
 }
