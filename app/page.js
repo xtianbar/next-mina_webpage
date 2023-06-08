@@ -4,7 +4,7 @@ export default function Home() {
   return (
       <>
         <header>
-          Hello
+          <div className='text-6xl'>Hello this is a header</div>
         </header>
         <aside>
           Aside
