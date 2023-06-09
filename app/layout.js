@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
-import { ShoppingBagIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 
 export const metadata = {
   title: 'Mina Webpage',
@@ -14,12 +14,18 @@ export default function RootLayout({ children }) {
       <body>
         <header className='w-full z-50 px-10 py-5 border-[0.1rem] border--black border-b shadow-sm'>
           <nav className=''>
-            <div className='cursor-pointer flex items-center justify-between'>
-              <Link className='flex items-center gap-1 font-bold text-2xl' href={'/'}>
-                <div className='flex items-center text-2xl font-extrabold gap-1'>
-                  <span className='logo'>MINA</span>
+            <div className='flex items-center justify-between'>
+              
+              <div className='flex items-center gap-10'>
+                <div className='block lg:hidden'>
+                  <Bars3Icon className='h-6 w-6' />
                 </div>
-              </Link>
+                <Link className='flex items-center gap-1 font-bold text-2xl' href={'/'}>
+                  <div className='flex items-center text-2xl font-extrabold gap-1'>
+                    <span className='logo'>MINA</span>
+                  </div>
+                </Link>
+              </div>
               <div className='flex gap-10'>
                 <ul className='hidden lg:flex flex-row gap-10'>
                   <li>
