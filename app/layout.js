@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
-import Navbar from '@/components/navbar'
+import { ShoppingBagIcon } from '@heroicons/react/24/outline'
 
 export const metadata = {
   title: 'Mina Webpage',
@@ -12,8 +12,43 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <header>
-          <Navbar />
+        <header className='w-full z-50 px-10 py-5 border-[0.1rem] border--black border-b shadow-sm'>
+          <nav className=''>
+            <div className='cursor-pointer flex items-center justify-between'>
+              <Link className='flex items-center gap-1 font-bold text-2xl' href={'/'}>
+                <div className='flex items-center text-2xl font-extrabold gap-1'>
+                  <span className='logo'>MINA</span>
+                </div>
+              </Link>
+              <div className='flex gap-10'>
+                <ul className='hidden lg:flex flex-row gap-10'>
+                  <li>
+                    <a href='/shop' className='flex gap-4 items-center'>Shop <svg class="item-content__icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-71b59201=""><path d="M5 6.5L0.669873 0.5L9.33013 0.500001L5 6.5Z" fill="currentColor" data-v-71b59201=""></path></svg></a>
+                  </li>
+                  <li>
+                    <a href='/sustainability'>Sustainability</a>
+                  </li>
+                  <li>
+                    <a href='/about'>About</a>
+                  </li>
+                  <li>
+                    <a href='/contact'>Contact</a>
+                  </li>
+                </ul>
+
+                <div className=''>
+                  <ul className='flex flex-row gap-5'>
+                    <li>
+                      <a href='/shop' className='flex gap-1'><ShoppingBagIcon className="h-6 w-6" />Cart (0)</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+
+              </div>
+              
+            </div>
+          </nav>
         </header>
         <main>
         {children}
