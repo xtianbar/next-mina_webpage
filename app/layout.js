@@ -28,24 +28,34 @@ export default function RootLayout({ children }) {
               </div>
               <div className='flex gap-10'>
                 <ul className='hidden lg:flex flex-row gap-10'>
-                  <li>
-                    <a href='/shop' className='flex gap-4 items-center'>Shop <svg class="item-content__icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-71b59201=""><path d="M5 6.5L0.669873 0.5L9.33013 0.500001L5 6.5Z" fill="currentColor" data-v-71b59201=""></path></svg></a>
+                  <li className='group relative cursor-pointer'>
+                    <a className='flex gap-4 items-center hover:underline-offset-[6px] hover:underline'>Shop <svg className="chevron item-content__icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-71b59201=""><path d="M5 6.5L0.669873 0.5L9.33013 0.500001L5 6.5Z" fill="currentColor" data-v-71b59201=""></path></svg></a>
+                    
+                    <div className="invisible absolute z-50 w-[11rem] flex flex-col shadow bg-white py-1 px-2 rounded-lg border-[0.1rem] border-white group-hover:visible">
+                      <a href='/products' className="block py-2 px-3 hover:underline-offset-[6px] hover:underline">
+                        All Products
+                      </a>
+                      <a href='collections' className="block py-2 px-3 hover:underline-offset-[6px] hover:underline">
+                        New Collections
+                      </a>
+                    </div>
+
                   </li>
                   <li>
-                    <a href='/sustainability'>Sustainability</a>
+                    <a className='hover:underline-offset-[6px] hover:underline' href='/sustainability'>Sustainability</a>
                   </li>
                   <li>
-                    <a href='/about'>About</a>
+                    <a className='hover:underline-offset-[6px] hover:underline' href='/about'>About</a>
                   </li>
                   <li>
-                    <a href='/contact'>Contact</a>
+                    <a className='hover:underline-offset-[6px] hover:underline' href='/contact'>Contact</a>
                   </li>
                 </ul>
 
                 <div className=''>
                   <ul className='flex flex-row gap-5'>
                     <li>
-                      <a href='/cart' className='flex gap-1'><ShoppingBagIcon className="h-6 w-6" />Cart (0)</a>
+                      <a href='/cart' className='flex gap-1'><ShoppingBagIcon className="h-6 w-6" /><span className='hover:underline-offset-[6px] hover:underline'>Cart (0)</span></a>
                     </li>
                     
                   </ul>

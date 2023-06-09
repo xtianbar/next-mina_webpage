@@ -23,3 +23,7 @@ body {
   font-family: var(--font-base);
   @apply antialiased text-black bg-white;
 }
+
+.group .chevron {
+  @apply hover:rotate-180;
+}
