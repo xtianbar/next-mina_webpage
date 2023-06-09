@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
                 <div className=''>
                   <ul className='flex flex-row gap-5'>
                     <li>
-                      <a href='/shop' className='flex gap-1'><ShoppingBagIcon className="h-6 w-6" />Cart (0)</a>
+                      <a href='/cart' className='flex gap-1'><ShoppingBagIcon className="h-6 w-6" />Cart (0)</a>
                     </li>
                     
                   </ul>
