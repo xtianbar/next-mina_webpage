@@ -5,6 +5,7 @@ export default function Home() {
       <>
         <div className=''>
           <div className='text-6xl'>Mina Webpage</div>
+          <div className='text-6xl'>Mina Webpage</div>
         </div>
       </>
   )

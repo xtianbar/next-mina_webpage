@@ -27,3 +27,7 @@ body {
 .group .chevron {
   @apply hover:rotate-180;
 }
+
+.footer-socmed svg:hover{
+  @apply fill-gray-900 ease-in-out cursor-pointer;
+}
