@@ -1,6 +1,16 @@
+import Image from 'next/image'
 import heroBanner from '../public/background/bg_1.png'
 import homeDecor from '../public/background/bg_2.png'
 import newsletterBG from '../public/background/bg_3.png'
+import ig1 from '../public/items/ig-1.png'
+import ig2 from '../public/items/ig-2.png'
+import ig3 from '../public/items/ig-3.png'
+import candy from '../public/items/candy.png'
+import drop from '../public/items/drop.png'
+import wave from '../public/items/wave.png'
+import sun from '../public/items/sun.png'
+import aboutMina from '../public/items/about-mina.png'
+import sustain from '../public/items/sustainability.png'
 
 export default function Home() {
   return (
@@ -18,6 +28,34 @@ export default function Home() {
           </div>
         </div>
 
+        <div className='flex flex-col items-center py-10 px-0 lg:px-5 w-full'>
+          <div className='my-10 text-center'>
+            <h2 className='text-4xl lg:text-5xl font-medium'>Our bestsellers</h2>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 justify-between mb-10'>
+            <div className='text-center'>
+              <Image src={candy} />
+              <p className='text-2xl pt-4 pb-2'>'Candy' Flowerpot</p>
+              <p className='pb-3 text-xl'><span className='text-[#828282] line-through'>$59.90</span> $49.90</p>
+            </div>
+            <div className='text-center'>
+              <Image src={drop}/>
+              <p className='text-2xl pt-4 pb-2'>'Drop' Vase</p>
+              <p className='pb-3 text-xl'><span className='text-[#828282] line-through'>$49.90</span> $40.90</p>
+            </div>
+            <div className='text-center'>
+              <Image src={wave} />
+              <p className='text-2xl pt-4 pb-2'>'Wave' Vase</p>
+              <p className='pb-3 text-xl uppercase text-[#828282]'>Sold out</p>
+            </div>
+            <div  className='text-center'>
+              <Image src={sun} />
+              <p className='text-2xl pt-4 pb-2'>'Sun' Vase</p>
+              <p className='pb-3 text-xl'>$69.90</p>
+            </div>
+          </div>
+        </div>
+
         <div style={{
           backgroundImage:`url(${homeDecor.src})`,
           width: '100%',
@@ -31,6 +69,28 @@ export default function Home() {
           </div>
         </div>
 
+        <div className='flex flex-col items-center py-10 px-5 w-full mt-12'>
+          
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-3 justify-between mt-6 mb-10'>
+            <div className='text-start'>
+              <Image src={aboutMina} />
+              <p className='text-3xl font-medium pt-8 pb-2 leading-10'>About Mina</p>
+              <p className='pb-3 text-xl text-[#828282] leading-10'>Mina is a brand born out of a passion for ceramics.</p>
+              <div className='mb-1 mt-2'>
+                <button type='button' className='text-white bg-[#4d205a] px-10 py-4 rounded-lg'>Learn more</button>
+              </div>
+            </div>
+            <div  className='text-start mt-16 md:mt-0'>
+              <Image src={sustain} />
+              <p className='text-3xl font-medium pt-8 pb-2 leading-10'>Sustainability</p>
+              <p className='pb-3 text-xl text-[#828282] leading-10'>Mina is an eco-friendly brand that cares about sustainability.</p>
+              <div className='mb-1 mt-2'>
+                <button type='button' className='text-white bg-[#4d205a] px-10 py-4 rounded-lg'>Learn more</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div style={{
           backgroundImage:`url(${newsletterBG.src})`,
           width: '100%',
@@ -45,12 +105,20 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex flex-col items-center py-10 px-5'>
-          <div className='my-10'>
-            <h2 className='text-5xl font-medium'>Follow us on Instagram</h2>
+        <div className='flex flex-col items-center py-10 px-5 w-full'>
+          <div className='my-10 text-center'>
+            <h2 className='text-4xl lg:text-5xl font-medium'>Follow us on Instagram</h2>
           </div>
-          <div className='mb-10'>
-            container
+          <div className='flex gap-3 justify-between mb-10'>
+            <div>
+              <Image src={ig1} />
+            </div>
+            <div>
+              <Image src={ig2}/>
+            </div>
+            <div>
+              <Image src={ig3} />
+            </div>
           </div>
           <div className='mb-10'>
             <button type='button' className='text-white bg-[#4d205a] px-10 py-4 rounded-lg'>@mina_studio</button>
