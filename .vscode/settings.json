@@ -1,6 +1,15 @@
 {
   "cSpell.words": [
+    "fontawesome",
+    "fortawesome",
+    "heroicons",
     "mina",
-    "Mina"
+    "Mina",
+    "socmed",
+    "tailwind",
+    "xtianbar"
+  ],
+  "cSpell.ignoreWords": [
+    "tailwind"
   ]
 }

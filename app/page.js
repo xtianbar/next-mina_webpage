@@ -35,22 +35,22 @@ export default function Home() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 justify-between mb-10'>
             <div className='text-center'>
               <Image alt='candy flowerpot' src={candy} />
-              <p className='text-2xl pt-4 pb-2'>'Candy' Flowerpot</p>
+              <p className='text-2xl pt-4 pb-2'>&apos;Candy&apos; Flowerpot</p>
               <p className='pb-3 text-xl'><span className='text-[#828282] line-through'>&#36;59.90</span> &#36;49.90</p>
             </div>
             <div className='text-center'>
               <Image alt='drop vase' src={drop}/>
-              <p className='text-2xl pt-4 pb-2'>'Drop' Vase</p>
+              <p className='text-2xl pt-4 pb-2'>&apos;Drop&apos; Vase</p>
               <p className='pb-3 text-xl'><span className='text-[#828282] line-through'>&#36;49.90</span> &#36;40.90</p>
             </div>
             <div className='text-center'>
               <Image alt='wave vase' src={wave} />
-              <p className='text-2xl pt-4 pb-2'>'Wave' Vase</p>
+              <p className='text-2xl pt-4 pb-2'>&apos;Wave&apos; Vase</p>
               <p className='pb-3 text-xl uppercase text-[#828282]'>Sold out</p>
             </div>
             <div  className='text-center'>
               <Image alt='sun vase' src={sun} />
-              <p className='text-2xl pt-4 pb-2'>'Sun' Vase</p>
+              <p className='text-2xl pt-4 pb-2'>&apos;Sun&apos; Vase</p>
               <p className='pb-3 text-xl'>&#36;69.90</p>
             </div>
           </div>
