@@ -100,7 +100,7 @@ export default function Home() {
           <div className='banner-content items-center justify-center'>
               <h1 className='mx-10 px-10 text-4xl md:text-5xl lg:text-7xl font-medium text-center leading-10 md:leading-[4.5rem]'>Sign-up for our newsletter</h1>
               {/* <p className='leading-[4.5rem] mb-5 font-medium text-lg'>Find your new favorite pieces.</p> */}
-                <input type='text' placeholder='Your email address' className='banner-input px-5 py-3 my-10' />
+                <input type='text' placeholder='Your email address' className='banner-input px-5 py-3 my-10 text-black' />
               <button type='button' className='bg-white text-[#4d205a] px-10 py-4 rounded-lg'>Submit</button>
           </div>
         </div>
