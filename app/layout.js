@@ -76,11 +76,11 @@ export default function RootLayout({ children }) {
         <main>
         {children}
         </main>
-        <footer className='bg-[#f1f1f1]'>
+        <footer className='bg-[#f1f1f1] overflow-hidden'>
           
-          <div className='flex items-center justify-between'>
+          <div className='flex flex-col md:flex-row pl-20 md:pl-0 md:items-center justify-between'>
 
-            <div className='flex flex-col items-start py-20 px-10 gap-8 font-semibold text-2xl'>
+            <div className='flex flex-col items-start py-20 md:px-10 gap-8 font-semibold text-2xl'>
               <Link className='text-[2rem]' href={'/'}>
                 <div className='flex items-center gap-1'>
                   <span className='logo'>MINA</span>
@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
               </div>
             </div>
 
-            <div className='flex flex-col items-start underline pr-36 gap-2 font-normal text-lg'>
+            <div className='flex flex-col items-start underline pr-0 pb-20 md:pb-0 md:pr-36 gap-2 font-normal text-lg'>
               <div className='cursor-pointer'>Contact</div>
               <div className='cursor-pointer'>Returns</div>
               <div className='cursor-pointer'>Payments & Delivery</div>

@@ -28,6 +28,23 @@ body {
   @apply hover:rotate-180;
 }
 
+.banner-container {
+  @apply m-0 p-0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner-content {
+  @apply flex items-center h-[30rem] md:h-screen w-full flex-col text-white justify-center;
+}
+/* .banner-title {
+  @apply text-[5rem] font-medium;
+} */
+.banner-input {
+  @apply w-[60%] md:w-[40%] lg:w-[30%];
+}
+.banner-input::placeholder {
+  @apply text-[#929292] text-sm;
+}
 .footer-socmed svg:hover{
   @apply fill-gray-900 ease-in-out cursor-pointer;
 }
