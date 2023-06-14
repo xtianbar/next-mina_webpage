@@ -9,7 +9,7 @@ import {
   brands,
   icon
 } from "@fortawesome/fontawesome-svg-core/import.macro"
-import { useState } from 'react';
+import { useState } from 'react'
 
 export const metadata = {
   title: 'Mina Webpage',
