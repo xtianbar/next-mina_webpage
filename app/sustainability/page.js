@@ -15,7 +15,16 @@ const page = () => {
               {/* <p className='leading-[4.5rem] mb-5 font-medium text-lg'>Painted clay ceramics made with love.</p>
               <button type='button' className='bg-white text-[#4d205a] px-10 py-4 rounded-lg'>Shop now</button> */}
           </div>
+      </div>
+
+      <div className='p-5 mt-10'>
+        <div className='text-center m-10 px-5 md:px-20 lg:px-[15rem]'>
+          <h2 className='text-2xl font-medium'>We care about our planet. For this reason, Mina aims to be operating sustainably and ethically at every level.</h2>
         </div>
+        <div>
+          hehe
+        </div>
+      </div>
     </div>
   )
 }
