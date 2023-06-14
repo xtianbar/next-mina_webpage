@@ -1,5 +1,3 @@
-"use client"
-
 import { Dropdown } from "flowbite-react";
 import Link from 'next/link'
 import './globals.css'
