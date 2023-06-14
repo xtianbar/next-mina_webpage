@@ -26,7 +26,7 @@ const Navbar = () => {
   <div className='flex justify-center items-center gap-10'>
     <div className='flex lg:hidden'>
     <button
-      className="text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+      className="text-gray-700 rounded-md"
       onClick={() => setNavbar(!navbar)}
     >
       {navbar ? (
