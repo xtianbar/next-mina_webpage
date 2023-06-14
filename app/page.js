@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import heroBanner from '../public/background/bg_1.png'
 import homeDecor from '../public/background/bg_2.png'
