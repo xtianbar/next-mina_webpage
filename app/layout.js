@@ -1,6 +1,9 @@
+'use client'
+
+import { Dropdown } from "flowbite-react";
 import Link from 'next/link'
 import './globals.css'
-import { Bars3Icon, ShoppingBagIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, ChevronRightIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   solid,
@@ -8,6 +11,7 @@ import {
   brands,
   icon
 } from "@fortawesome/fontawesome-svg-core/import.macro"
+import { useState } from 'react';
 
 export const metadata = {
   title: 'Mina Webpage',
@@ -16,16 +20,28 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  const [navbar, setNavbar] = useState(false);
   return (
     <html lang="en">
       <body>
         <header className='w-full z-50 px-10 py-5 border-[0.1rem] border--black border-b shadow-sm'>
           <nav className=''>
+
             <div className='flex items-center justify-between'>
               
-              <div className='flex items-center gap-10'>
-                <div className='block lg:hidden'>
-                  <Bars3Icon className='h-6 w-6' />
+              <div className='flex justify-center items-center gap-10'>
+                <div className='flex lg:hidden'>
+                <button
+                  className="text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  onClick={() => setNavbar(!navbar)}
+                >
+                  {navbar ? (
+                    <XMarkIcon className='h-6 w-6' />
+                  ) : (
+                    <Bars3Icon className='h-6 w-6' />
+                  )}
+                </button>
                 </div>
                 <Link className='flex items-center gap-1 font-bold text-2xl' href={'/'}>
                   <div className='flex items-center text-2xl font-extrabold gap-1'>
@@ -71,6 +87,58 @@ export default function RootLayout({ children }) {
               </div>
               
             </div>
+            
+            {/* mobile */}
+            <div
+              className={`flex justify-end lg:hidden ${
+                navbar ? 'py-12 px-5 block' : 'hidden'
+              }`}
+            >
+              <ul className='flex flex-col items-end gap-10'>
+                  <li className='group relative cursor-pointer'>
+                  
+                  <Dropdown inline label="Shop">
+                    <Dropdown.Item className="w-[15rem] bg-transparent">
+                      <a href='/products' className="block py-2 px-3 hover:underline-offset-[6px] hover:underline">
+                        All Products
+                      </a>
+                    </Dropdown.Item>
+                    <Dropdown.Item className="w-[15rem] bg-transparent">
+                      <a href='collections' className="block py-2 px-3 hover:underline-offset-[6px] hover:underline">
+                        New Collections
+                      </a>
+                    </Dropdown.Item>
+                  </Dropdown>
+                    
+                    {/* <button type='button' id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className='flex gap-4 items-center hover:underline-offset-[6px] hover:underline'>
+                      Shop 
+                      <svg className="chevron item-content__icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-71b59201=""><path d="M5 6.5L0.669873 0.5L9.33013 0.500001L5 6.5Z" fill="currentColor" data-v-71b59201=""></path>
+                      </svg>
+                    </button> */}
+                    
+                    {/* <div className="invisible absolute z-50 w-[11rem] flex flex-col shadow bg-white py-1 px-2 rounded-lg border-[0.1rem] border-white group-hover:visible">
+                      <a href='/products' className="block py-2 px-3 hover:underline-offset-[6px] hover:underline">
+                        All Products
+                      </a>
+                      <a href='collections' className="block py-2 px-3 hover:underline-offset-[6px] hover:underline">
+                        New Collections
+                      </a>
+                    </div> */}
+
+                  </li>
+                  <li>
+                    <a className='hover:underline-offset-[6px] hover:underline' href='/sustainability'>Sustainability</a>
+                  </li>
+                  <li>
+                    <a className='hover:underline-offset-[6px] hover:underline' href='/about'>About</a>
+                  </li>
+                  <li>
+                    <a className='hover:underline-offset-[6px] hover:underline' href='/contact'>Contact</a>
+                  </li>
+                </ul>
+
+            </div>
+
           </nav>
         </header>
         <main>
