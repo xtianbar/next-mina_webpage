@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
                 <div className=''>
                   <ul className='flex flex-row gap-5'>
                     <li>
-                      <a href='/cart' className='flex gap-1'><ShoppingBagIcon className="h-6 w-6" /><span className='hover:underline-offset-[6px] hover:underline'>Cart (0)</span></a>
+                      <a href='#' className='flex gap-1'><ShoppingBagIcon className="h-6 w-6" /><span className='hover:underline-offset-[6px] hover:underline'>Cart (0)</span></a>
                     </li>
                     
                   </ul>
