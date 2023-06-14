@@ -34,7 +34,7 @@ export default function Home() {
           <div className='my-10 text-center'>
             <h2 className='text-4xl lg:text-5xl font-medium'>Our bestsellers</h2>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 justify-between mb-10'>
+          <div className='grid grid-cols-1 md:grid-cols-2 px-5 lg:grid-cols-4 gap-3 justify-between mb-10'>
             <div className='text-center'>
               <Image alt='candy flowerpot' src={candy} />
               <p className='text-2xl pt-4 pb-2'>&apos;Candy&apos; Flowerpot</p>
